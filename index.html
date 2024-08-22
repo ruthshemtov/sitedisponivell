@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Inovação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Telecom</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#about">Sobre Nós</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="hero">
+            <h2>Conecte-se com o Melhor</h2>
+            <p>Oferecemos a melhor conexão para sua casa ou empresa.</p>
+            <button id="learn-more">Saiba Mais</button>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="service">
+                <h3>Internet Residencial</h3>
+                <p>Velocidades rápidas e estáveis para sua casa.</p>
+            </div>
+            <div class="service">
+                <h3>Internet Empresarial</h3>
+                <p>Conexão dedicada para sua empresa.</p>
+            </div>
+            <div class="service">
+                <h3>Suporte 24/7</h3>
+                <p>Nosso suporte está sempre disponível para ajudá-lo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <p>Somos uma empresa comprometida com a qualidade e a satisfação dos nossos clientes.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Telecom. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Pop-up Flutuante -->
+    <div id="popup" class="popup">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLJaHxhOixdPwfDC-UvacH0PjABSnYFXsDmmwfyDs_Aj-AxsQAwDxxnjQ&s=10" alt="Imagem Destaque" class="popup-image">
+        <h2 id="waveText">Parabéns!</h2>
+        <p>Você contratou o serviço DDoS da VIVO.</p>
+        <p>Você está protegido!</p>
+        <button id="close-popup">Fechar</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+<style>
+    /* Reset básico para o estilo */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box; 
+    }
+
+    /* Estilo geral */
+    body {
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* Cabeçalho */
+    header {
+        background-color: #6a1b9a; /* Roxo escuro */
+        color: white;
+        padding: 1rem 0;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* Seções */
+    section {
+        padding: 2rem 0;
+    }
+
+    .hero {
+        background-color: #8e24aa; /* Roxo mais claro */
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    button {
+        background-color: #7b1fa2; /* Roxo médio */
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #6a1b9a; /* Roxo escuro */
+    }
+
+    /* Serviços */
+    .service {
+        background-color: #f3e5f5; /* Roxo muito claro */
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+
+    /* Formulário */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin: 0.5rem 0;
+    }
+
+    input, textarea {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    footer {
+        background-color: #6a1b9a; /* Roxo escuro */
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    /* Pop-up Flutuante */
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        color: #6a1b9a;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        max-width: 400px;
+        text-align: center;
+        z-index: 1000;
+        display: none;
+    }
+
+    .popup-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .popup h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .popup p {
+        margin: 10px 0;
+    }
+
+    #close-popup {
+        background-color: #6a1b9a;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    /* Animação da Onda */
+    span {
+        display: inline-block;
+        transition: transform 0.1s ease-in-out;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const learnMoreButton = document.getElementById('learn-more');
+        const contactForm = document.getElementById('contact-form');
+        const popup = document.getElementById('popup');
+        const closePopup = document.getElementById('close-popup');
+        const waveText = document.getElementById('waveText');
+
+        // Mostrar a pop-up após 3 segundos
+        setTimeout(() => {
+            popup.style.display = 'block';
+            animateWave();
+        }, 3000); // Mostra a pop-up após 3 segundos
+
+        // Fechar a pop-up
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        // Animação da onda
+        function animateWave() {
+            const characters = waveText.innerText.split('');
+            waveText.innerHTML = ''; // Limpa o conteúdo do elemento
+
+            // Envolve cada caractere em um span
+            characters.forEach((char, index) => {
+                const span = document.createElement('span');
+                span.innerText = char;
+                span.style.position = 'relative';
+                waveText.appendChild(span);
+            });
+
+            const spans = waveText.querySelectorAll('span');
+
+            // Função de animação de onda
+            function wave() {
+                const time = Date.now() / 1000; // Tempo em segundos
+                spans.forEach((span, index) => {
+                    const offset = Math.sin(index * 0.5 + time) * 10;
+                    span.style.transform = translateY(${offset}px);
+                });
+
+                requestAnimationFrame(wave);
+            }
+
+            // Inicia a animação
+            wave();
+        }
+
+        // Scroll suave para a seção de serviços
+        learnMoreButton.addEventListener('click', () => {
+            document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Submissão do formulário de contato
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            alert('Formulário enviado com sucesso!');
+        });
+    });
+</script
